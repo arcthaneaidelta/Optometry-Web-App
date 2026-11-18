@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: light;
+  }
+  
+  body {
+    background-color: #F7F6F2;
+    color: #252B27;
+    font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  ::selection {
+    background-color: #A9B6A5;
+    color: #252B27;
+  }
+}
+
+@layer utilities {
+  /* Subtle glassmorphism and borders */
+  .border-soft {
+    border-color: #E4E2DA;
+  }
+  
+  .editorial-italic {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  /* Hide scrollbar for clean horizontal carousels */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
